@@ -9,7 +9,7 @@ public class CarFactory {
 		if (carType.equals("Toyota")) {
 			return new Toyota();
 		}
-		if (carType.equals("Honda1")) {
+		if (carType.equals("Honda")) {
 			return new Honda();
 		}
 		
