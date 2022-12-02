@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
+    <fullyQualifiedTypeName name="jakarta.persistence.Id"/>
+    <fullyQualifiedTypeName name="ec.edu.itsqmet.singleton.repository.ICountryRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="ec.edu.itsqmet.singleton.dto.CountryDTO"/>
+    <fullyQualifiedTypeName name="ec.edu.itsqmet.singleton.CountrySingleton"/>
+    <fullyQualifiedTypeName name="ec.edu.itsqmet.repository.ICountryRepository"/>
+    <fullyQualifiedTypeName name="org.junit.jupiter.api.Test"/>
+    <fullyQualifiedTypeName name="ec.edu.itsqmet.factory.Car"/>
+    <fullyQualifiedTypeName name="ec.edu.itsqmet.factory.Nissan"/>
+    <fullyQualifiedTypeName name="ec.edu.itsqmet.factory.CarFactory"/>
+</qualifiedTypeNameHistroy>

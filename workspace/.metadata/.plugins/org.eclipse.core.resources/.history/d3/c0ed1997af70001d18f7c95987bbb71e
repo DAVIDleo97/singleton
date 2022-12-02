@@ -1,0 +1,42 @@
+package ec.edu.itsqmet;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import ec.edu.itsqmet.factory.Nissan;
+import ec.edu.itsqmet.repository.ICountryRepository;
+import ec.edu.itsqmet.singleton.CountrySingleton;
+
+@SpringBootTest
+class SingletonApplicationTests {
+	@Autowired
+	private ICountryRepository countryRepository;
+
+	//@Test
+	void contextLoads() {
+		//countryRepository.count();
+		//CountryDTO cdto = new CountryDTO ();
+		//System.out.println(countryRepository.count());
+		//assertEquals(2, countryRepository.count());
+		//System.out.println(cdto.id);
+		//System.out.println("instancia 1 "+ CountrySingleton.getInstance());
+		//System.out.println(CountrySingleton.getTotalCountries(countryRepository));
+		//CountrySingleton.getInstance();
+		for (int i=0; i<=500; i++) {
+			System.out.println(CountrySingleton.getTotalCountries(countryRepository));
+		}
+	}
+	@Test
+	void testingFactor() {
+		//Car car= new Car();
+		Nissan ns = new Nissan();
+		// ns.getYear();
+		System.out.println(ns.getYear());
+		//int juan=3;
+		ns.setYear(1980);
+		System.out.println(ns.getYear());
+		
+	}
+	
+}

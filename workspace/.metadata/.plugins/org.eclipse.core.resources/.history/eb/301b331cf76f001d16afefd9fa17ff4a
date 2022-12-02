@@ -1,0 +1,13 @@
+package ec.edu.itsqmet.singleton;
+
+public class CountrySingleton {
+	private CountrySingleton instance;
+	private CountrySingleton () {
+	}
+	public CountrySingleton getInstance() {
+		if (instance ==null) {
+			instance = new CountrySingleton();
+		}
+		return instance;
+	}
+}

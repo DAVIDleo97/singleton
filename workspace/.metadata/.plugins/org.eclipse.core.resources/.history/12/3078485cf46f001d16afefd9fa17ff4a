@@ -1,0 +1,23 @@
+package ec.edu.itsqmet.singleton;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import ec.edu.itsqmet.singleton.dto.CountryDTO;
+import ec.edu.itsqmet.singleton.repository.ICountryRepository;
+
+@SpringBootTest
+class SingletonApplicationTests {
+	@Autowired
+	private ICountryRepository countryRepository;
+
+	@Test
+	void contextLoads() {
+		countryRepository.count();
+		//CountryDTO cdto = new CountryDTO ();
+		System.out.println(countryRepository.count());
+		//assertEquals(2, countryRepository.count());
+		//System.out.println(cdto.id);
+	}
+}

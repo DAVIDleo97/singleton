@@ -1,0 +1,14 @@
+package ec.edu.itsqmet.singleton;
+
+public class CountrySingleton {
+	private static CountrySingleton instance;
+	private CountrySingleton () {
+	}
+	public static CountrySingleton getInstance() {
+		if (instance ==null) {
+			instance = new CountrySingleton();
+			System.out.println("creando instancias");
+		}
+		return instance;
+	}
+}

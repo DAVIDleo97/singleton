@@ -1,0 +1,8 @@
+
+spring.datasource.url=jdbc:mysql://localhost:3306/quality
+spring.datasource.username=root
+spring.datasource.password=UCEleo1997
+spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+spring.jpa.database-platform=org.hibernate.dialect.MySQL5Dialect
+
+#spring.datasource.driver-class-name=com.mysql.jdbc.Driver

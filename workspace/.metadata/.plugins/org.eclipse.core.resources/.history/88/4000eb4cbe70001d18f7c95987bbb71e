@@ -1,0 +1,62 @@
+package ec.edu.itsqmet;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import ec.edu.itsqmet.factory.CarFactory;
+import ec.edu.itsqmet.factory.Honda;
+import ec.edu.itsqmet.factory.Nissan;
+import ec.edu.itsqmet.factory.Toyota;
+import ec.edu.itsqmet.repository.ICountryRepository;
+import ec.edu.itsqmet.singleton.CountrySingleton;
+
+@SpringBootTest
+class SingletonApplicationTests {
+	@Autowired
+	private ICountryRepository countryRepository;
+
+	//@Test
+	void contextLoads() {
+		//countryRepository.count();
+		//CountryDTO cdto = new CountryDTO ();
+		//System.out.println(countryRepository.count());
+		//assertEquals(2, countryRepository.count());
+		//System.out.println(cdto.id);
+		//System.out.println("instancia 1 "+ CountrySingleton.getInstance());
+		//System.out.println(CountrySingleton.getTotalCountries(countryRepository));
+		//CountrySingleton.getInstance();
+		for (int i=0; i<=500; i++) {
+			System.out.println(CountrySingleton.getTotalCountries(countryRepository));
+		}
+	}
+	@Test
+	void testingFactor() {
+		//Car car= new Car();
+		// ns.getYear();
+		//int juan=3;
+		Nissan ns80 = CarFactory.newCar();
+		ns80.setYear(1980);
+		System.out.println("Nissan de "+ ns80.getYear() +" "+ ns80.maxSpeed());
+		
+		Nissan ns75 = CarFactory.newCar();
+		ns75.setYear(1975);
+		System.out.println("Nissan de "+ ns75.getYear());
+		
+		Nissan ns86 = CarFactory.newCar();
+		ns86.setYear(1986);
+		System.out.println("Nissan de "+ ns86.getYear());
+		
+		CarFactory.newCar();
+		Nissan ns97= CarFactory.newCar();
+		
+		Toyota ty83 = new Toyota();
+		ty83.setYear(1983);
+		System.out.println("Toyota de "+ ty83.getYear()+ ty83.maxSpeed());
+		
+		Toyota ty91 = new Toyota();
+		ty91.setYear(1991);
+		System.out.println("Toyota de "+ ty91.getYear());
+	}
+	
+}

@@ -1,0 +1,7 @@
+package ec.edu.itsqmet.factory;
+
+public class CarFactory {
+	public Nissan newCar() {
+		return new Nissan(); //instanciar un objeto de tipo nissan
+	}
+}
